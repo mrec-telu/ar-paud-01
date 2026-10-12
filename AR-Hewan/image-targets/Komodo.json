@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/Komodo_luminance.png",
+  "metadata": null,
+  "name": "Komodo",
+  "resources": {
+    "originalImage": "Komodo_original.png",
+    "croppedImage": "Komodo_cropped.png",
+    "thumbnailImage": "Komodo_thumbnail.png",
+    "luminanceImage": "Komodo_luminance.png"
+  },
+  "created": 1790327417941,
+  "updated": 1790327448964
+}

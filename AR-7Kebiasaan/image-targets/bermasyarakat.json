@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/bermasyarakat_luminance.png",
+  "metadata": null,
+  "name": "bermasyarakat",
+  "resources": {
+    "originalImage": "bermasyarakat_original.png",
+    "croppedImage": "bermasyarakat_cropped.png",
+    "thumbnailImage": "bermasyarakat_thumbnail.png",
+    "luminanceImage": "bermasyarakat_luminance.png"
+  },
+  "created": 1790999235514,
+  "updated": 1790999244646
+}

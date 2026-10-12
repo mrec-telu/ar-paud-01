@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/Jerapah_luminance.png",
+  "metadata": null,
+  "name": "Jerapah",
+  "resources": {
+    "originalImage": "Jerapah_original.png",
+    "croppedImage": "Jerapah_cropped.png",
+    "thumbnailImage": "Jerapah_thumbnail.png",
+    "luminanceImage": "Jerapah_luminance.png"
+  },
+  "created": 1790326452890,
+  "updated": 1790326460680
+}

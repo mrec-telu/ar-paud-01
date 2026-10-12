@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/Kelinci_luminance.png",
+  "metadata": null,
+  "name": "Kelinci",
+  "resources": {
+    "originalImage": "Kelinci_original.png",
+    "croppedImage": "Kelinci_cropped.png",
+    "thumbnailImage": "Kelinci_thumbnail.png",
+    "luminanceImage": "Kelinci_luminance.png"
+  },
+  "created": 1790319994282,
+  "updated": 1790320000358
+}

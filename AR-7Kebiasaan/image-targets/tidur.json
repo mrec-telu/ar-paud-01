@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/tidur_luminance.png",
+  "metadata": null,
+  "name": "tidur",
+  "resources": {
+    "originalImage": "tidur_original.png",
+    "croppedImage": "tidur_cropped.png",
+    "thumbnailImage": "tidur_thumbnail.png",
+    "luminanceImage": "tidur_luminance.png"
+  },
+  "created": 1790999249691,
+  "updated": 1790999255748
+}

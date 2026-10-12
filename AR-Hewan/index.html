@@ -1,0 +1,221 @@
+<!doctype html><html lang="id"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover"><title>AR Hewan</title><meta itemprop="name" content="AR Hewan"><meta name="twitter:title" content="AR Hewan"><meta property="og:title" content="AR Hewan"><meta property="og:site_name" content="AR Hewan"><meta name="description" content="AR Project Hewan"><script crossorigin="anonymous" src="./external/runtime/runtime.js"></script><script crossorigin="anonymous" src="./external/xr/xr.js" async="true" data-preload-chunks="face, slam"></script><style>/* 1. RESET UTAMA */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: transparent;
+    }
+
+    body {
+      position: fixed;
+      inset: 0;
+    }
+
+    @supports (height: 100dvh) {
+      html,
+      body {
+        height: 100dvh;
+      }
+    }
+
+    /* 2. CANVAS AR FULLSCREEN */
+    canvas {
+      position: fixed !important;
+      inset: 0;
+      width: 100% !important;
+      height: 100% !important;
+      object-fit: cover;
+      z-index: 1 !important;
+    }
+
+    /* 3. OVERLAY UI */
+    .ar-overlay {
+      position: fixed;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
+      pointer-events: none;
+    }
+
+    @supports (height: 100dvh) {
+      .ar-overlay {
+        height: 100dvh;
+      }
+    }
+
+    /* 4. TOMBOL BACK */
+    #back-link {
+      position: absolute;
+      top: max(20px, env(safe-area-inset-top, 0px));
+      left: max(20px, env(safe-area-inset-left, 0px));
+      display: block;
+      pointer-events: auto;
+      text-decoration: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    #btn-back {
+      display: block;
+      width: 55px;
+      max-width: none;
+      height: auto;
+      object-fit: contain;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+      transition: transform 0.1s ease;
+    }
+
+    #btn-back:active {
+      transform: scale(0.9);
+    }
+
+    /* 5. WADAH DUA TOMBOL */
+    #ui-container {
+      position: absolute;
+      left: 50%;
+      bottom: max(40px, env(safe-area-inset-bottom, 0px));
+      transform: translateX(-50%);
+      width: max-content;
+      max-width: calc(100% - 30px);
+      height: auto;
+
+      display: none;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(12px, 3vw, 30px);
+
+      pointer-events: none;
+    }
+
+    /* 6. TOMBOL PENJELASAN DAN SUARA HEWAN */
+    #btn-penjelasan,
+    #btn-suara {
+      display: block;
+      width: clamp(100px, 15vw, 160px);
+      height: clamp(100px, 15vw, 160px);
+      max-width: none;
+      flex: 0 1 auto;
+      object-fit: contain;
+
+      pointer-events: auto;
+      cursor: pointer;
+      user-select: none;
+      -webkit-user-drag: none;
+      -webkit-tap-highlight-color: transparent;
+
+      filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
+      transition: transform 0.1s ease;
+    }
+
+    #btn-penjelasan:active,
+    #btn-suara:active {
+      transform: scale(0.92);
+    }
+
+    /* 7. HP PORTRAIT */
+    @media screen and (max-width: 600px) and (orientation: portrait) {
+      #back-link {
+        top: max(15px, env(safe-area-inset-top, 0px));
+        left: max(15px, env(safe-area-inset-left, 0px));
+      }
+
+      #btn-back {
+        width: 52px;
+      }
+
+      #ui-container {
+        width: calc(100% - 30px);
+        bottom: max(25px, env(safe-area-inset-bottom, 0px));
+        gap: clamp(10px, 3vw, 18px);
+      }
+
+      #btn-penjelasan,
+      #btn-suara {
+        width: min(32vw, 140px);
+        height: min(32vw, 140px);
+      }
+    }
+
+    /* 8. TABLET PORTRAIT */
+    @media screen and (min-width: 601px) and (orientation: portrait) {
+      #back-link {
+        top: max(20px, env(safe-area-inset-top, 0px));
+        left: max(20px, env(safe-area-inset-left, 0px));
+      }
+
+      #btn-back {
+        width: 85px;
+      }
+
+      #ui-container {
+        width: calc(100% - 60px);
+        bottom: max(35px, env(safe-area-inset-bottom, 0px));
+        gap: clamp(20px, 4vw, 35px);
+      }
+
+      #btn-penjelasan,
+      #btn-suara {
+        width: clamp(120px, 20vw, 180px);
+        height: clamp(120px, 20vw, 180px);
+      }
+    }
+
+    /* 9. LANDSCAPE */
+    @media screen and (orientation: landscape) {
+      #back-link {
+        top: max(15px, env(safe-area-inset-top, 0px));
+        left: max(15px, env(safe-area-inset-left, 0px));
+      }
+
+      #btn-back {
+        width: clamp(55px, 7vw, 85px);
+      }
+
+      #ui-container {
+        width: max-content;
+        max-width: calc(100% - 100px);
+        bottom: max(25px, env(safe-area-inset-bottom, 0px));
+        gap: clamp(12px, 3vw, 30px);
+      }
+
+      #btn-penjelasan,
+      #btn-suara {
+        width: clamp(100px, 15vw, 150px);
+        height: clamp(100px, 15vw, 150px);
+      }
+    }
+
+    /* 10. LANDSCAPE DENGAN TINGGI LAYAR PENDEK */
+    @media screen and (orientation: landscape) and (max-height: 450px) {
+      #back-link {
+        top: max(10px, env(safe-area-inset-top, 0px));
+        left: max(10px, env(safe-area-inset-left, 0px));
+      }
+
+      #btn-back {
+        width: 55px;
+      }
+
+      #ui-container {
+        max-width: calc(100% - 80px);
+        bottom: max(12px, env(safe-area-inset-bottom, 0px));
+        gap: clamp(8px, 2vw, 20px);
+      }
+
+      #btn-penjelasan,
+      #btn-suara {
+        width: clamp(75px, 13vh, 115px);
+        height: clamp(75px, 13vh, 115px);
+      }
+    }</style></head><body><div class="ar-overlay"><a href="arpaud://launcher" id="back-link"><img id="btn-back" src="assets/Back.png" alt="Back"></a><div id="ui-container"><img class="tombol-ganti" id="btn-penjelasan" src="assets/Penjelasan.png" alt="Penjelasan"> <img class="tombol-ganti" id="btn-suara" src="assets/Hewan.png" alt="Suara Hewan"></div></div><audio id="audio-penjelasan" src=""></audio><script src="bundle.js"></script></body></html>

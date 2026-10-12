@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/Sapi_luminance.png",
+  "metadata": null,
+  "name": "Sapi",
+  "resources": {
+    "originalImage": "Sapi_original.png",
+    "croppedImage": "Sapi_cropped.png",
+    "thumbnailImage": "Sapi_thumbnail.png",
+    "luminanceImage": "Sapi_luminance.png"
+  },
+  "created": 1790331198637,
+  "updated": 1790331205906
+}

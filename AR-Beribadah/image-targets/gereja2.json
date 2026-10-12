@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/gereja2_luminance.png",
+  "metadata": null,
+  "name": "gereja2",
+  "resources": {
+    "originalImage": "gereja2_original.png",
+    "croppedImage": "gereja2_cropped.png",
+    "thumbnailImage": "gereja2_thumbnail.png",
+    "luminanceImage": "gereja2_luminance.png"
+  },
+  "created": 1791469016994,
+  "updated": 1791469023201
+}

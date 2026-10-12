@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/makan_luminance.png",
+  "metadata": null,
+  "name": "makan",
+  "resources": {
+    "originalImage": "makan_original.png",
+    "croppedImage": "makan_cropped.png",
+    "thumbnailImage": "makan_thumbnail.png",
+    "luminanceImage": "makan_luminance.png"
+  },
+  "created": 1790999199720,
+  "updated": 1790999204013
+}

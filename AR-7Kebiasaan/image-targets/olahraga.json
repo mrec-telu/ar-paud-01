@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/olahraga_luminance.png",
+  "metadata": null,
+  "name": "olahraga",
+  "resources": {
+    "originalImage": "olahraga_original.png",
+    "croppedImage": "olahraga_cropped.png",
+    "thumbnailImage": "olahraga_thumbnail.png",
+    "luminanceImage": "olahraga_luminance.png"
+  },
+  "created": 1790999207112,
+  "updated": 1790999211784
+}

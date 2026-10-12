@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/bangun_luminance.png",
+  "metadata": null,
+  "name": "bangun",
+  "resources": {
+    "originalImage": "bangun_original.png",
+    "croppedImage": "bangun_cropped.png",
+    "thumbnailImage": "bangun_thumbnail.png",
+    "luminanceImage": "bangun_luminance.png"
+  },
+  "created": 1790999184279,
+  "updated": 1790999193016
+}

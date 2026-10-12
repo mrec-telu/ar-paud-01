@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/Kambing_luminance.png",
+  "metadata": null,
+  "name": "Kambing",
+  "resources": {
+    "originalImage": "Kambing_original.png",
+    "croppedImage": "Kambing_cropped.png",
+    "thumbnailImage": "Kambing_thumbnail.png",
+    "luminanceImage": "Kambing_luminance.png"
+  },
+  "created": 1790320377603,
+  "updated": 1790320384086
+}

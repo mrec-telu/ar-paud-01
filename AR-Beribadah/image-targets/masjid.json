@@ -1,0 +1,23 @@
+{
+  "type": "PLANAR",
+  "properties": {
+    "top": 47,
+    "left": 0,
+    "width": 1240,
+    "height": 1653,
+    "isRotated": false,
+    "originalWidth": 1240,
+    "originalHeight": 1748
+  },
+  "imagePath": "image-targets/masjid_luminance.png",
+  "metadata": null,
+  "name": "masjid",
+  "resources": {
+    "originalImage": "masjid_original.png",
+    "croppedImage": "masjid_cropped.png",
+    "thumbnailImage": "masjid_thumbnail.png",
+    "luminanceImage": "masjid_luminance.png"
+  },
+  "created": 1791471402222,
+  "updated": 1791471408223
+}
